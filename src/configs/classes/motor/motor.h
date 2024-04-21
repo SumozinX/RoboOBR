@@ -12,7 +12,7 @@ class Motor {
         int tra_dir;
         int tra_esq;
         int vel;
-        int vel_max = 255;
+        const int vel_max = 255;
 
     public:
         
