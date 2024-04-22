@@ -7,7 +7,7 @@ class InfraVermelho {
     private:
 
         int out;
-        
+
     public:
 
         InfraVermelho (int out_) {
@@ -16,7 +16,7 @@ class InfraVermelho {
         };
 
         bool detectar() {
-            return digitalRead(out) == LOW;
+            return digitalRead(out) == HIGH;
     }        
 
 };

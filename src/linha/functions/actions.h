@@ -72,15 +72,15 @@ class LinhaActions{
         void manter_linha() {
 
             if (
-                infra_direito.detectar() &&
-                infra_esquerdo.detectar() == false
+                infra_direito.detectar() == false &&
+                infra_esquerdo.detectar()
                 ) {
                 motor.parar(0);
                 motor.esquerda();
             }
             else if (
-                infra_esquerdo.detectar() &&
-                infra_direito.detectar() == false
+                infra_esquerdo.detectar() == false &&
+                infra_direito.detectar()
                 ) {
                 motor.parar(0);
                 motor.direita();
