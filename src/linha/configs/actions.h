@@ -1,11 +1,11 @@
 #ifndef linha_actions
 #define linha_actions
 
-#include <configs/classes/motor/motor.h>
-#include <configs/classes/sensores/sensores.h>
-#include <configs/classes/sensores/SensorCor.h>
-#include <configs/classes/sensores/SensorDistancia.h>
-#include <configs/classes/sensores/SensorInfra.h>
+#include <linha/configs/classes/motor/motor.h>
+#include <linha/configs/classes/sensores/sensores.h>
+#include <linha/configs/classes/sensores/SensorCor.h>
+#include <linha/configs/classes/sensores/SensorDistancia.h>
+#include <linha/configs/classes/sensores/SensorInfra.h>
 #include <Arduino.h>
 
 class LinhaActions{
