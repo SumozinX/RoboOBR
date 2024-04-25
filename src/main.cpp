@@ -1,5 +1,5 @@
 #include<Arduino.h>
-#include <linha/functions/actions.h>
+#include <linha/configs/actions.h>
 
 void setup() {
 

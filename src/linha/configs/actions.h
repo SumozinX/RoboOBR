@@ -34,13 +34,15 @@ class LinhaActions{
     const int e_out = 0;
 
     const int saida_infra_direita = 0;
-    const int saida_infra_esquerdo= 0;
+    const int saida_infra_esquerdo = 0;
+    const int saida_infra_meio = 0;
 
     Motor motor{frente_direita, frente_esquerda, tras_direita, tras_esquerda, velocidade};
     SensorCor cor_direita {d_s0, d_s1, d_s2, d_s3, d_out, d_led};
     SensorCor cor_esquerda {e_s0, e_s1, e_s2, e_s3, e_out, e_led};
     InfraVermelho infra_esquerdo {saida_infra_esquerdo};
     InfraVermelho infra_direito {saida_infra_direita};
+    InfraVermelho infra_meio {saida_infra_meio};
     Distancia distancia {echo, trig};
 
     public:
@@ -73,6 +75,7 @@ class LinhaActions{
 
             if (
                 infra_direito.detectar() == false &&
+                infra_meio.detectar() == false &&
                 infra_esquerdo.detectar()
                 ) {
                 motor.parar(0);
@@ -80,6 +83,7 @@ class LinhaActions{
             }
             else if (
                 infra_esquerdo.detectar() == false &&
+                infra_meio.detectar() == false &&
                 infra_direito.detectar()
                 ) {
                 motor.parar(0);
